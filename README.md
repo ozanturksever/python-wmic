@@ -1,0 +1,4 @@
+python-wmic
+===========
+
+python-wmic

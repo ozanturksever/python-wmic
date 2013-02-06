@@ -1,9 +1,0 @@
-prefix=bin/
-includedir=lib/talloc
-
-Name: talloc
-Description: A hierarchical pool based memory system with destructors
-Version: 0.0.1
-Libs: -Lbin/shared -Lbin/static -ltalloc
-Libs.private: -lreplace 
-Cflags: -I${includedir} -I. -Iinclude -Ilib -Ilib/replace -DHAVE_IMMEDIATE_STRUCTURES=1

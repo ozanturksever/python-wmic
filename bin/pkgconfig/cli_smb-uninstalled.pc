@@ -1,9 +1,0 @@
-prefix=bin/
-includedir=libcli
-
-Name: cli_smb
-Description: SMB/CIFS client library
-Version: 0.0.1
-Libs: -Lbin/shared -Lbin/static -lcli_smb
-Libs.private: -lcli_raw -lsamba-errors -lcli_auth -lcli_smb_composite -lcli_nbt -lsecurity -lcli_resolve -lcli_dgram -lcli_smb2 -lcli_finddcs -lsamba-socket -lreplace 
-Cflags: -I${includedir} -I. -Iinclude -Ilib -Ilib/replace -DHAVE_IMMEDIATE_STRUCTURES=1

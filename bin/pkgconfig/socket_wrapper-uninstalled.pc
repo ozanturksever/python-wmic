@@ -1,9 +1,0 @@
-prefix=bin/
-includedir=lib/socket_wrapper
-
-Name: socket_wrapper
-Description: Wrapper library for testing TCP/IP connections using Unix Sockets
-Version: 0.0.1
-Libs: -Lbin/shared -Lbin/static -lsocket_wrapper
-Libs.private: -lreplace 
-Cflags: -I${includedir} -I. -Iinclude -Ilib -Ilib/replace -DHAVE_IMMEDIATE_STRUCTURES=1

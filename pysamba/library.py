@@ -30,17 +30,16 @@ def samba_find_library(library_name):
     # go hunting for it
     if not library_location:
         # along the elements of the dynamic library load path
-        path = os.environ.get('LD_LIBRARY_PATH', '')
-        print path
+        path = os.environ.get('LD_LIBRARY_PATH', '/usr/local/lib/samba4/')
         for directory in path.split(":") + sys.path:
             # with various endings, depending on platform
             for prefix in 'lib','':
                 for ending in ".so", ".dylib":
                     pattern = os.path.join(directory,
                                            prefix + library_name + ending) + '*'
-                    print pattern
                     for filename in sorted(glob.glob(pattern)):
                         return filename
+    return library_location
 
 if "DEBUG_LIB" in os.environ:
     library = CDLL(os.environ["DEBUG_LIB"])

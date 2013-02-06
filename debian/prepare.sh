@@ -71,8 +71,8 @@ fi
 log "Starting to prepare ${package_directory} directory"
 rm -rf ${package_directory}
 mkdir -p ${package_directory}/usr/local/lib/samba4
-mkdir -p ${package_directory}/usr/local/lib/python2.7/pysamba
-mkdir -p ${package_directory}/usr/local/lib/python2.7/zenoss_utils
+mkdir -p ${package_directory}/usr/local/lib/python2.7/dist-packages/pysamba
+mkdir -p ${package_directory}/usr/local/lib/python2.7/dist-packages/zenoss_utils
 rsync -a --exclude=.git --exclude=debian/ --exclude=.idea --exclude=.DS_Store ${repository_directory}/bin/shared/ ${package_directory}/usr/local/lib/samba4/
 rsync -a --exclude=.git --exclude=debian/ --exclude=.idea --exclude=.DS_Store ${repository_directory}/pysamba/ ${package_directory}/usr/local/lib/python2.7/dist-packages/pysamba
 rsync -a --exclude=.git --exclude=debian/ --exclude=.idea --exclude=.DS_Store ${repository_directory}/zenoss_utils/ ${package_directory}/usr/local/lib/python2.7/dist-packages/zenoss_utils

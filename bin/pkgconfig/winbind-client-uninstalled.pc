@@ -1,0 +1,9 @@
+prefix=bin/
+includedir=nsswitch
+
+Name: winbind-client
+Description: Client library for communicating with winbind
+Version: 0.0.1
+Libs: -Lbin/shared -Lbin/static -lwinbind-client
+Libs.private: -lreplace 
+Cflags: -I${includedir} -I. -Iinclude -Ilib -Ilib/replace -DHAVE_IMMEDIATE_STRUCTURES=1

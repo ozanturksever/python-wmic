@@ -1,0 +1,10 @@
+prefix=bin/
+includedir=libcli
+
+Name: cli_wrepl
+Description: WINS Replication client library
+Requires: ndr_winsrepl 
+Version: 0.0.1
+Libs: -Lbin/shared -Lbin/static -lcli_wrepl
+Libs.private: -lsamba-socket -lcli_resolve -levents -lpacket -lreplace 
+Cflags: -I${includedir} -I. -Iinclude -Ilib -Ilib/replace -DHAVE_IMMEDIATE_STRUCTURES=1

@@ -1,0 +1,9 @@
+prefix=bin/
+includedir=param
+
+Name: samba-config
+Description: Reading Samba configuration files
+Version: 0.0.1
+Libs: -Lbin/shared -Lbin/static -lsamba-config
+Libs.private: -lsamba-util -lreplace -ldynconfig 
+Cflags: -I${includedir} -I. -Iinclude -Ilib -Ilib/replace -DHAVE_IMMEDIATE_STRUCTURES=1

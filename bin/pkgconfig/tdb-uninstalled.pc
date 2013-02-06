@@ -1,0 +1,9 @@
+prefix=bin/
+includedir=lib/tdb
+
+Name: tdb
+Description: Trivial Database Library
+Version: 0.0.1
+Libs: -Lbin/shared -Lbin/static -ltdb
+Libs.private: -lreplace 
+Cflags: -I${includedir} -I. -Iinclude -Ilib -Ilib/replace -DHAVE_IMMEDIATE_STRUCTURES=1

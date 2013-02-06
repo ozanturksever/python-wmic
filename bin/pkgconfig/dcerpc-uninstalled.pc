@@ -1,0 +1,10 @@
+prefix=bin/
+includedir=librpc
+
+Name: dcerpc
+Description: DCE/RPC client library
+Requires.private: cli_smb ndr gensec 
+Version: 0.0.1
+Libs: -Lbin/shared -Lbin/static -ldcerpc
+Libs.private: -lreplace -lsamba-socket -lcli_resolve -lcli_smb2 -lndr_dcerpc -lrpc_ndr_epmapper -lndr_schannel -lrpc_ndr_netlogon -lcli_auth -lcli_raw -lcredentials 
+Cflags: -I${includedir} -I. -Iinclude -Ilib -Ilib/replace -DHAVE_IMMEDIATE_STRUCTURES=1

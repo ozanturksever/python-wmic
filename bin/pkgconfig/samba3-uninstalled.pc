@@ -1,0 +1,10 @@
+prefix=bin/
+includedir=lib/samba3
+
+Name: samba3
+Description: Library for reading Samba3 data files
+Requires.private: tdb ndr_security 
+Version: 0.0.1
+Libs: -Lbin/shared -Lbin/static -lsamba3
+Libs.private: -lreplace -lsamba-util -lcredentials 
+Cflags: -I${includedir} -I. -Iinclude -Ilib -Ilib/replace -DHAVE_IMMEDIATE_STRUCTURES=1

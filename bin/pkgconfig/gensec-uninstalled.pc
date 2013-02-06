@@ -1,0 +1,10 @@
+prefix=bin/
+includedir=auth/gensec
+modulesdir=${prefix}/modules/gensec
+
+Name: gensec
+Description: Generic Security Library
+Version: 0.0.1
+Libs: -Lbin/shared -Lbin/static -lgensec
+Libs.private: -lcredentials -lsamba-util -lcrypto -lasn1_util -lreplace -lcredentials_krb5 -lkerberos -lauth -lauth_sam -lreplace -lauth -lschanneldb -lndr_schannel -lcredentials -lreplace -lcredentials -lreplace -lasn1_util -lgensec_socket -lcredentials_krb5 -lkerberos -lauth -lheimdal_gssapi -lreplace -lauth -lmsrpc_parse -lreplace 
+Cflags: -I${includedir} -I. -Iinclude -Ilib -Ilib/replace -DHAVE_IMMEDIATE_STRUCTURES=1

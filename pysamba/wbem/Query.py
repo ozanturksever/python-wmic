@@ -43,7 +43,7 @@ library.com_init_ctx = logFuncCall(library.com_init_ctx)
 class _WbemObject:
     def __getattr__(self, name):
         try:
-            return self.__dict__[name.lower()]
+            return self.__dict__[name]
         except Exception, ex:
             raise AttributeError(name)
 
@@ -101,7 +101,7 @@ def wbemInstanceToPython(obj):
         prop = klass.properties[j]
         value = convert(inst.data[j], prop.desc.contents.cimtype & CIM_TYPEMASK)
         if prop.name:
-            setattr(result, prop.name.lower(), value)
+            setattr(result, prop.name, value)
     return result
 
 def deferred(ctx):
